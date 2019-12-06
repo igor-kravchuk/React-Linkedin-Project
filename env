@@ -1,0 +1,4 @@
+#COMMENT API
+REACT_APP_API=https://strive-school-testing-apis.herokuapp.com/api/
+REACT_APP_API_USERNAME=user25
+REACT_APP_API_PASSWORD=gX7HF4hYaYyJAzpt
