@@ -12,6 +12,7 @@ import {
   Label,
   Input
 } from "reactstrap";
+import ImageUpload from './ImageUpload';
 
 const ModalComponent = props => {
   const { buttonLabel, className, formData, handleChange } = props;
@@ -106,22 +107,7 @@ const ModalComponent = props => {
                 placeholder="Area"
               />
             </FormGroup>
-            <FormGroup>
-              <Label for="image">Picture</Label>
-              <img
-                src={formData.image}
-                alt="profile-form-pic"
-                className="rounded-circle form-pic"
-              />
-              <Input
-                type="url"
-                name="image"
-                id="image"
-                value={formData.image}
-                onChange={handleChange}
-                placeholder="Your picture URL"
-              />
-            </FormGroup>
+            <ImageUpload url={formData.image} />          
           </Form>
         </ModalBody>
         <ModalFooter>

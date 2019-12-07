@@ -14,7 +14,6 @@ export default class Profile extends Component {
 
   componentDidMount = async () => {
     const myProfile = await getProfile(); // from profileCRUD to fetch all data line 8
-
     setTimeout(() => {
       this.props.setProfile(myProfile.image);
       this.setState({

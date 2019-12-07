@@ -4,6 +4,7 @@ export const createProfileAPIQuery = (urlGenerator, method = "GET") => async (
   body, //body has the information of all {name, surname etc}
   ...params
 ) => {
+  console.log('+++++', body)
   try {
     const url = urlGenerator(...params);
     const token = btoa(API_USERNAME + ":" + API_PASSWORD);
@@ -12,7 +13,6 @@ export const createProfileAPIQuery = (urlGenerator, method = "GET") => async (
       body: body,
       headers: new Headers({
         Authorization: "Basic " + token,
-        "Content-Type": "application/json",
         Accept: "application/json" //accepting the Json
       })
     };

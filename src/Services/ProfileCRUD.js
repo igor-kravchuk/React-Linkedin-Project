@@ -24,3 +24,8 @@ export const updateProfile = createProfileAPIQuery(id => {
 export const deleteProfile = createProfileAPIQuery(id => {
   return `${API_URL}profile/?id=${id}`;
 }, "delete"); //id is used to specify whom we are deleting
+
+export const updatePicture = createProfileAPIQuery(() => {
+  // POST https://striveschool.herokuapp.com/api/profile/{username}/picture
+  return `${API_URL}profile/${API_USERNAME}/picture`;
+}, "POST");
